@@ -173,11 +173,10 @@ int main() {
 
   Matrix res;
   MatrixMalloc(&res, n);
-  MatrixMult(&mat, &mat1, &res);
+  MatrixReverse(&mat, M, &res);
   clock_t endTime = clock();
   printf("%f\n", (float)(endTime - startTime) / CLOCKS_PER_SEC);
 
-  MatrixPrint(res);
   MatrixFree(&mat);
 
   return 0;
